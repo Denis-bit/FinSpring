@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wealth Edu - Financial Freedom, Made Simple</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+   <!-- Header Section -->
+<header class="header">
+    <div class="logo">
+        <img src="/home/cristina/unihack/logo.png"  class="logo-img">
+
+    </div>
+    <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="#">Pricing</a>
+        <a href="#">Contact</a>
+        <a href="login.html" class="button">Log In</a>
+    </nav>
+</header>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #3498db; /* Background color */
+            color: white; /* Text color */
+            text-align: center;
+            padding: 20px;
+        }
+        .hero-content {
+            max-width: 600px; /* Set a maximum width for content */
+        }
+        h1 {
+            font-size: 3em; /* Size for the header */
+            overflow: hidden; /* Ensures the text is hidden until typed */
+            white-space: nowrap; /* Prevents text from wrapping */
+            border-right: 0.15em solid white; /* Cursor effect */
+            animation: blink-caret 0.75s step-end infinite; /* Blinking cursor effect */
+            margin: 0; /* Remove default margin */
+        }
+        p {
+            font-size: 1.5em; /* Size for the paragraph */
+            overflow: hidden; /* Ensures the text is hidden until typed */
+            white-space: nowrap; /* Prevents text from wrapping */
+            border-right: 0.15em solid white; /* Cursor effect */
+            animation: blink-caret 0.75s step-end infinite; /* Blinking cursor effect */
+            margin: 10px 0 0 0; /* Space above the paragraph */
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: white; } /* Blinking effect */
+        }
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #3ce745; /* Button color */
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #2bc037; /* Darker button color on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 id="header"></h1>
+            <p id="subheader"></p>
+            <a href="signup.html" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <script>
+        const headerText = "Elevate Your Future";
+        const paragraphText = "Your personal finance app to manage wealth and achieve financial goals faster.";
+        let headerIndex = 0;
+        let paragraphIndex = 0;
+
+        function typeHeader() {
+            if (headerIndex < headerText.length) {
+                document.getElementById('header').innerHTML += headerText.charAt(headerIndex);
+                headerIndex++;
+                setTimeout(typeHeader, 100); // Typing speed for header
+            } else {
+                typeParagraph(); // Start typing paragraph after header is done
+            }
+        }
+
+        function typeParagraph() {
+            if (paragraphIndex < paragraphText.length) {
+                document.getElementById('subheader').innerHTML += paragraphText.charAt(paragraphIndex);
+                paragraphIndex++;
+                setTimeout(typeParagraph, 50); // Typing speed for paragraph
+            }
+        }
+
+        typeHeader(); // Start the typing animation for the header
+    </script>
+
+</body>
+</html>
+
+
+
+<!-- Key Features Section -->
+<section class="features" style="position: absolute; top: 20%; left: 5%; color: white;"> <!-- Added positioning -->
+    <h2>Our Key Features</h2>
+    <div class="feature-cards">
+        <a href="#personalized-dashboard" class="card">
+            <h3>Personalized Dashboard</h3>
+            <p>Track your finances, investments, and goals in one place with a dashboard customized just for you.</p>
+        </a>
+        <a href="#real-time-analytics" class="card">
+            <h3>Real-Time Analytics</h3>
+            <p>Monitor market trends, asset performance, and receive updates on your investments in real-time.</p>
+        </a>
+        <a href="#goal-oriented-planning" class="card">
+            <h3>Goal-Oriented Planning</h3>
+            <p>Set financial milestones and receive step-by-step guidance on how to reach them efficiently.</p>
+        </a>
+    </div>
+</section>
+
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Finance Platform Presentation</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            /* Slideshow Styles */
+            .slideshow-container {
+                position: relative;
+                max-width: 1000px; /* Set a maximum width */
+                margin: auto;
+                overflow: hidden; /* Hide overflow for smooth slides */
+                border-radius: 10px; /* Rounded corners for aesthetics */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            }
+
+            .mySlides {
+                display: none; /* Hide slides by default */
+                padding: 20px; /* Padding for content inside slides */
+                text-align: center; /* Center text */
+            }
+
+            .show {
+                 display: block; /* Show the slide */
+                 opacity: 1; /* Set opacity to 1 when shown */
+            }
+
+            img {
+                width: 100%; /* Responsive images */
+                border-radius: 10px; /* Rounded corners for images */
+            }
+
+            .text {
+                color: #333; /* Darker text for better readability */
+                font-size: 24px; /* Font size for slide text */
+                margin-top: 10px; /* Margin for spacing */
+            }
+
+            .prev, .next {
+                cursor: pointer; /* Pointer cursor for buttons */
+                position: absolute; /* Absolute positioning for buttons */
+                top: 50%; /* Center vertically */
+                width: auto; /* Auto width for buttons */
+                padding: 16px; /* Padding for buttons */
+                color: white; /* Button text color */
+                font-weight: bold; /* Bold text */
+                font-size: 18px; /* Button text size */
+                transition: 0.6s ease; /* Transition for button hover effect */
+                border-radius: 0 3px 3px 0; /* Rounded corners */
+                user-select: none; /* Disable text selection */
+            }
+
+            .next {
+                right: 0; /* Position next button to the right */
+                border-radius: 3px 0 0 3px; /* Adjust corners */
+            }
+
+            .prev:hover, .next:hover {
+                background-color: rgba(0, 0, 0, 0.8); /* Darken background on hover */
+            }
+
+            .dot {
+                cursor: pointer; /* Pointer cursor for dots */
+                height: 15px; /* Dot height */
+                width: 15px; /* Dot width */
+                margin: 0 2px; /* Spacing between dots */
+                background-color: #bbb; /* Dot color */
+                border-radius: 50%; /* Circular dots */
+                display: inline-block; /* Inline display */
+                transition: background-color 0.6s ease; /* Transition for dot hover effect */
+            }
+
+            .active, .dot:hover {
+                background-color: #717171; /* Darker color for active dot */
+            }
+
+            @media (max-width: 768px) {
+                .text {
+                    font-size: 20px; /* Smaller text size on mobile */
+                }
+
+                .prev, .next {
+                    font-size: 16px; /* Smaller button text on mobile */
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="/home/cristina/unihack/piramid.jpg" alt="Feature 1">
+                <div class="text">Track Your Expenses Easily</div>
+            </div>
+
+            <div class="mySlides">
+                <img src="/home/cristina/unihack/chart.avif" alt="Feature 2">
+                <div class="text">Set Budget Goals and Achieve Them</div>
+            </div>
+
+            <div class="mySlides">
+                <img src="/home/cristina/unihack/chart.avif" alt="Feature 3">
+                <div class="text">Get Insights into Your Spending Habits</div>
+            </div>
+
+            <div class="mySlides">
+                <img src="/home/cristina/unihack/chart.avif" alt="Feature 4">
+                <div class="text">Invest Smartly with Expert Guidance</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+
+        <script>
+            let slideIndex = 1; // Initialize slide index
+            showSlides(slideIndex); // Show initial slide
+
+            // Function to change slides
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            // Function to set current slide
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            // Function to show slides
+            function showSlides(n) {
+                let i;
+                const slides = document.getElementsByClassName("mySlides");
+                const dots = document.getElementsByClassName("dot");
+
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none"; // Hide all slides
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", ""); // Remove active class from all dots
+                }
+
+                slides[slideIndex - 1].style.display = "block"; // Show current slide
+                dots[slideIndex - 1].className += " active"; // Mark current dot as active
+            }
+
+            // Autoplay function
+            function autoSlide() {
+                slideIndex++;
+                showSlides(slideIndex);
+            }
+
+            // Set interval for autoplay (e.g., every 5 seconds)
+            setInterval(autoSlide, 5000); // Change 5000 to the number of milliseconds you want
+        </script>
+
+    </body>
+    </html>
+
+     <!-- Goal Setting Section -->
+     <section class="goal-setting">
+        <h2>Set and Track Your Financial Goals</h2>
+        <p>From retirement to buying a new home, FinWise helps you set, plan, and reach your financial objectives.</p>
+        <a href="signup.html" class="cta-button">Start Your Journey</a>
+    </section>
+<!-- Detailed Feature Sections -->
+<section id="personalized-dashboard" class="feature-detail">
+    <h2 class="feature-title">PERSONALIZED DASHBOARD</h2>
+    <p>This feature allows you to track your finances, investments, and goals in one place with a dashboard customized just for you. Here you can see your progress and manage your financial activities efficiently.</p>
+    <p>With an intuitive layout, our dashboard provides a holistic view of your financial health, helping you make informed decisions quickly.</p>
+</section>
+<style>
+    /* Add your CSS here */
+    .slideshow-container {
+        position: relative;
+        max-width: 600px; /* Adjust width as necessary */
+        margin: auto;
+        overflow: hidden; /* Hide overflow for smooth slides */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    }
+
+    .mySlides {
+        display: none; /* Hide slides by default */
+        text-align: center; /* Center text */
+    }
+
+    img {
+        width: 100%; /* Responsive images */
+        border-radius: 10px; /* Rounded corners for images */
+    }
+
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        border-radius: 3px;
+        user-select: none;
+    }
+
+    .next {
+        right: 0;
+    }
+
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+</style>
+</head>
+<body>
+
+
+
+<!-- Slideshow 1 -->
+<div class="slideshow-container">
+    <div class="mySlides slideshow1">
+        <img src="slide1.jpg" alt="Slide 1">
+        <div class="text">Slide 1 Description</div>
+    </div>
+    <div class="mySlides slideshow1">
+        <img src="slide2.jpg" alt="Slide 2">
+        <div class="text">Slide 2 Description</div>
+    </div>
+    <div class="mySlides slideshow1">
+        <img src="slide3.jpg" alt="Slide 3">
+        <div class="text">Slide 3 Description</div>
+    </div>
+    <div class="mySlides slideshow1">
+        <img src="slide4.jpg" alt="Slide 4">
+        <div class="text">Slide 4 Description</div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1, 'slideshow1')">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, 'slideshow1')">&#10095;</a>
+</div>
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1, 'slideshow1')"></span>
+    <span class="dot" onclick="currentSlide(2, 'slideshow1')"></span>
+    <span class="dot" onclick="currentSlide(3, 'slideshow1')"></span>
+    <span class="dot" onclick="currentSlide(4, 'slideshow1')"></span>
+</div>
+<section id="real-time-analytics" class="feature-detail">
+    <h2 class="feature-title">REAL-TIME ANALYTICS</h2>
+    <p>This feature provides tools to monitor market trends, asset performance, and receive updates on your investments in real-time. Stay informed and make timely decisions.</p>
+    <p>Get insights through comprehensive data visualizations and reports that simplify complex information, making it easier for you to understand your financial landscape.</p>
+</section>
+<!-- Slideshow 2 -->
+<div class="slideshow-container">
+    <div class="mySlides slideshow2">
+        <img src="slide5.jpg" alt="Slide 5">
+        <div class="text">Slide 5 Description</div>
+    </div>
+    <div class="mySlides slideshow2">
+        <img src="slide6.jpg" alt="Slide 6">
+        <div class="text">Slide 6 Description</div>
+    </div>
+    <div class="mySlides slideshow2">
+        <img src="slide7.jpg" alt="Slide 7">
+        <div class="text">Slide 7 Description</div>
+    </div>
+    <div class="mySlides slideshow2">
+        <img src="slide8.jpg" alt="Slide 8">
+        <div class="text">Slide 8 Description</div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1, 'slideshow2')">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, 'slideshow2')">&#10095;</a>
+</div>
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1, 'slideshow2')"></span>
+    <span class="dot" onclick="currentSlide(2, 'slideshow2')"></span>
+    <span class="dot" onclick="currentSlide(3, 'slideshow2')"></span>
+    <span class="dot" onclick="currentSlide(4, 'slideshow2')"></span>
+</div>
+
+<section id="goal-oriented-planning" class="feature-detail">
+    <h2 class="feature-title">GOAL-ORIENTED PLANNING</h2>
+    <p>Set financial milestones and receive step-by-step guidance on how to reach them efficiently. Whether saving for a vacation or planning for retirement, this tool helps you stay on track.</p>
+    <p>Our platform encourages you to set realistic goals and provides actionable strategies tailored to your unique financial situation.</p>
+</section>
+<!-- Slideshow 3 -->
+<div class="slideshow-container">
+    <div class="mySlides slideshow3">
+        <img src="slide9.jpg" alt="Slide 9">
+        <div class="text">Slide 9 Description</div>
+    </div>
+    <div class="mySlides slideshow3">
+        <img src="slide10.jpg" alt="Slide 10">
+        <div class="text">Slide 10 Description</div>
+    </div>
+    <div class="mySlides slideshow3">
+        <img src="slide11.jpg" alt="Slide 11">
+        <div class="text">Slide 11 Description</div>
+    </div>
+    <div class="mySlides slideshow3">
+        <img src="slide12.jpg" alt="Slide 12">
+        <div class="text">Slide 12 Description</div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1, 'slideshow3')">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, 'slideshow3')">&#10095;</a>
+</div>
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1, 'slideshow3')"></span>
+    <span class="dot" onclick="currentSlide(2, 'slideshow3')"></span>
+    <span class="dot" onclick="currentSlide(3, 'slideshow3')"></span>
+    <span class="dot" onclick="currentSlide(4, 'slideshow3')"></span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 FinWise. All rights reserved.</p>
+        <nav class="footer-nav">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </nav>
+    </footer>
+</body>
+</html>
